@@ -1,7 +1,7 @@
 
 # System Monitoring Dashboard
 
-This is a System Monitoring Dashboard built using Python, Dash, and Plotly. The dashboard provides real-time insights into various system statistics, including CPU, memory, disk usage, network activity, battery status, and processes. It also includes a toggle mode feature for light/dark mode.
+	This is a System Monitoring Dashboard built using Python, Dash, and Plotly. The dashboard provides real-time insights into various system statistics, including CPU, memory, disk usage, network activity, battery status, and processes. It also includes a toggle mode feature for light/dark mode.
 
 ## Features
 	•	Real-time system monitoring: Displays system statistics such as CPU usage, memory usage, disk usage, network activity, and battery status.
