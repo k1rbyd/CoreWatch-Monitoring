@@ -19,46 +19,47 @@ This is a System Monitoring Dashboard built using Python, Dash, and Plotly. The 
 ## Installation
 
 To get started with the project, follow these steps:
-
-	1. Clone the repository
 	
-	git clone https://github.com/yourusername/system-monitoring-dashboard.git
-	cd system-monitoring-dashboard
+ 1. Clone the repository
 	
-	2. Create a virtual environment (optional but recommended)
+ 		git clone https://github.com/yourusername/system-monitoring-dashboard.git
+		cd system-monitoring-dashboard
 	
-	python -m venv venv
+2. Create a virtual environment (optional but recommended)
 	
-	3. Activate the virtual environment
-		•	On Windows:
+ 		python -m venv venv
 	
-			venv\Scripts\activate
+3. Activate the virtual environment
 	
-		•	On macOS/Linux:
+  •	On Windows:
+  
+		venv\Scripts\activate
 	
-			source venv/bin/activate
+•	On macOS/Linux:
 	
-	4. Install required dependencies
+		source venv/bin/activate
 	
-	pip install -r requirements.txt
+4. Install required dependencies
+	
+		pip install -r requirements.txt
 	
 	Here is the requirements.txt:
 	
-	dash==2.0.0
-	psutil==5.8.0
-	plotly==5.0.0
+		dash==2.0.0
+		psutil==5.8.0
+		plotly==5.0.0
 	
-	5. Run the application
+5. Run the application
 	
 	Once the dependencies are installed, you can run the application using the following command:
 	
-	python app.py
+		python app.py
 	
 	The app will start a local server at http://127.0.0.1:8050/ by default.
 
 ## How It Works
 
-	1. System Stats Collection (get_system_stats function)
+1. System Stats Collection (get_system_stats function)
 	
 	The application retrieves system stats using the psutil library. It collects information such as:
 		•	Memory Usage: Total, used, and free memory in gigabytes.
@@ -70,7 +71,7 @@ To get started with the project, follow these steps:
 	
 	The get_system_stats function organizes this data into a dictionary that is later used to update the dashboard’s visuals.
 	
-	2. Dashboard Layout
+3. Dashboard Layout
 	
 	The dashboard consists of the following components:
 		•	Title Section: Displays the title of the dashboard and an interval dropdown for setting the update frequency.
@@ -83,22 +84,22 @@ To get started with the project, follow these steps:
 		•	Process Table: A table listing the active processes and their memory usage.
 		•	Last Updated: A label indicating the time when the stats were last updated.
 	
-	3. Callbacks
+4. Callbacks
 	
 	The application uses Dash callbacks to handle the real-time update of the dashboard:
 		•	Update Interval: The interval-dropdown lets users choose the update frequency (1, 2, 5, 10, 15, 20, 30, 60 seconds).
 		•	Light/Dark Mode Toggle: The button toggles between light and dark themes. The UI is dynamically updated based on the current mode.
 		•	System Stats Update: Every time the interval elapses, the system stats are fetched again, and the graphs are updated.
 	
-	4. Mode Toggle Feature
+5. Mode Toggle Feature
 	
 	The light/dark mode toggle allows users to switch between light and dark themes. This feature is achieved by changing the background color and text color of the entire layout, including individual components like the title, graphs, and dropdown menus.
 	
-	5. Real-time Data Update
+6. Real-time Data Update
 	
 	The application automatically updates the dashboard at the selected interval (e.g., every 1, 2, 5, 10, 15, 20, 30, or 60 seconds). It uses Dash’s Interval component to periodically fetch new system stats and update the UI.
 	
-	6. Graph Components
+7. Graph Components
 	
 	The app uses Plotly for creating interactive graphs:
 		•	Memory Usage: A bar chart with two bars representing total and used memory.
@@ -107,11 +108,11 @@ To get started with the project, follow these steps:
 		•	Network Usage: A bar chart comparing the amount of data sent and received.
 		•	Battery Status: A gauge chart displaying battery percentage and status.
 	
-	7. Process Table
+8. Process Table
 	
 	The table displays a list of running processes with memory usage. It updates dynamically as the system stats change.
 	
-	8. Last Updated Time
+9. Last Updated Time
 	
 	The dashboard shows the last updated timestamp to inform the user when the data was last refreshed.
 
